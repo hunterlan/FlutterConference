@@ -1,3 +1,4 @@
+import 'package:conferences/list_conferences.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -68,6 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
               content: Text('Auth failed'),
               backgroundColor: Colors.red,
           )
+        );
+      } else {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => ListConferences())
         );
       }
     }
