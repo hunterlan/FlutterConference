@@ -5,30 +5,31 @@
       "name": ".NET Fwdays'22",
       "description": "Developing for Linux on Windows, Azure Service Bus, MAUI, .NET6, DAPR application — all this and even more at our eighth .NET fwdays'22 online conference.\n\nThe main conference day will be held on October 15 at 11:00 a.m. (GMT+3). And weekdays with additional formats. Talks will be in Ukrainian and English.\n\n10% of the cost of each ticket will be given to humanitarian missions or trusted volunteer groups of Ukraine.",
       "date": "2022-10-15",
-      "companies": [
+      "employees": [
         {
           "id": 1,
-          "name": "DraftKings",
-          "employees": [
-            {
-              "id": 1,
-              "name": "Anton Moldovan"
-            }
-          ]
+          "name": "Anton Moldovan",
+          "company_id": 1
         },
         {
           "id": 2,
-          "name": "Microsoft",
-          "employees": [
-            {
-              "id": 2,
-              "name": "Eldert Grootenboer"
-            },
-            {
-              "id": 3,
-              "name": "Scott Hanselman"
-            }
-          ]
+          "name": "Eldert Grootenboer",
+          "company_id": 2
+        },
+        {
+          "id": 3,
+          "name": "Scott Hanselman",
+          "company_id": 2
+        }
+      ],
+      "companies": [
+        {
+          "id": 1,
+          "name": "DraftKings"
+        },
+        {
+          "id": 2,
+          "name": "Microsoft"
         }
       ],
       "speeches": [
@@ -36,6 +37,16 @@
           "id": 1,
           "name": "Load Testing Distributed Systems with NBomber 4.0",
           "employee_id": 1
+        },
+        {
+          "id": 2,
+          "name": "The latest and greatest from Azure Service Bus",
+          "employee_id": 2
+        },
+        {
+          "id": 3,
+          "name": ".NET for Linux and Windows",
+          "employee_id": 3
         }
       ]
     }

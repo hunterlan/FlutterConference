@@ -1,22 +1,13 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:conferences/conference_details.dart';
+import 'package:conferences/conference_singleton.dart';
 import 'package:flutter/material.dart';
 
 import 'models/conference.dart';
 
 class ListConferences extends StatelessWidget {
-  List<Conference> conferences = [];
-
-  ListConferences({super.key}) {
-    loadFile();
-  }
-
-  void loadFile() {
-    String content = File('./assets/data/conferences.json').readAsStringSync();
-    var jsonContent = json.decode(content);
-    conferences = List<Conference>.from(jsonContent["conferences"].map((x) => Conference.fromJson(x)));
-  }
+  List<Conference> conferences = ConferenceSingleton().conferences;
 
   void itemInvoked(BuildContext context, int index) {
     Navigator.push(
