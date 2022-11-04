@@ -18,18 +18,19 @@ class SpeechesList extends StatelessWidget {
     return conference.employees.firstWhere((element) => element.id == employeeId);
   }
 
-  ListTile itemBuilder(BuildContext context, int index) {
+  Widget itemBuilder(BuildContext context, int index) {
     final item = speeches[index];
 
-    return ListTile(
-      title: Text(
-        item.name,
-        style: Theme.of(context).textTheme.headline5,
-      ),
-      subtitle: Text(
-        _findEmployee(item.employeeId).name
-      ),
-    );
+    return Card(
+        child: ListTile(
+          title: Text(
+            item.name,
+            style: Theme.of(context).textTheme.headline5,
+          ),
+          subtitle: Text(
+            _findEmployee(item.employeeId).name
+          ),
+    ));
   }
 
   @override

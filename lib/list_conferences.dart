@@ -16,19 +16,20 @@ class ListConferences extends StatelessWidget {
     );
   }
 
-  ListTile itemBuilder(BuildContext context, int index) {
+  Widget itemBuilder(BuildContext context, int index) {
     final item = conferences[index];
 
-    return ListTile(
-      title: Text(
-        item.name,
-        style: Theme.of(context).textTheme.headline5,
-      ),
-      subtitle: Text(
-        item.date.toString().substring(0, 10)
-      ),
-      onTap: () => itemInvoked(context, index),
-    );
+    return Card(
+        child: ListTile(
+            title: Text(
+              item.name,
+              style: Theme.of(context).textTheme.headline5,
+            ),
+            subtitle: Text(
+              item.date.toString().substring(0, 10)
+            ),
+            onTap: () => itemInvoked(context, index),
+    ));
   }
 
   @override
